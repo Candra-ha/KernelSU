@@ -357,11 +357,8 @@ bool is_manager_apk(char *path)
     }
 #endif
 
-	return (check_v2_signature(path, 0x0341, "5b2b42344c38e7832e4ee4f4d75729bd5cb4680100dbfebd343f0a1798b9daed") // dummy.keystore
-	|| check_v2_signature(path, EXPECTED_SIZE, EXPECTED_HASH)  // kernelsu official
-	|| check_v2_signature(path, 0x375, "484fcba6e6c43b1fb09700633bf2fb4758f13cb0b2f4457b80d075084b26c588")  // KOWX712/KernelSU
-	|| check_v2_signature(path, 0x3e6, "79e590113c4c4c0c222978e413a5faa801666957b1212a328e46c00c69821bf7")  // rifsxd/KernelSU-Next
-	|| check_v2_signature(path, 0x396, "f415f4ed9435427e1fdf7f1fccd4dbc07b3d6b8751e4dbcec6f19671f427870b")  // rsuntk/KernelSU
-	|| check_v2_signature(path, 0x381, "52d52d8c8bfbe53dc2b6ff1c613184e2c03013e090fe8905d8e3d5dc2658c2e4")  // WildKernels/Wild_KSU
+	return (check_v2_signature(path, 0x0341, "5b2b42344c38e7832e4ee4f4d75729bd5cb4680100dbfebd343f0a1798b9daed")
+	|| check_v2_signature(path, EXPECTED_SIZE, EXPECTED_HASH)
+	|| check_v2_signature(path, EXPECTED_SIZE2, EXPECTED_HASH2)
 	);
 }
